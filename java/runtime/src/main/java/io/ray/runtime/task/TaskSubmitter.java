@@ -78,10 +78,10 @@ public interface TaskSubmitter {
    * Wait for the placement group to be ready within the specified time.
    *
    * @param id Id of placement group.
-   * @param timeoutSeconds Timeout in seconds.
+   * @param timeoutMs Timeout in milliseconds.
    * @return True if the placement group is created. False otherwise.
    */
-  boolean waitPlacementGroupReady(PlacementGroupId id, int timeoutSeconds);
+  boolean waitPlacementGroupReady(PlacementGroupId id, int timeoutMs);
 
   BaseActorHandle getActor(ActorId actorId);
 }
