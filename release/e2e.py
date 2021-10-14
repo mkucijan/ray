@@ -1753,7 +1753,7 @@ def run_test(test_config_file: str,
              session_name=None,
              app_config_id_override=None):
     with open(test_config_file, "rt") as f:
-        test_configs = yaml.load(f, Loader=yaml.FullLoader)
+        test_configs = yaml.safe_load(f)
 
     test_config_dict = {}
     for test_config in test_configs:
